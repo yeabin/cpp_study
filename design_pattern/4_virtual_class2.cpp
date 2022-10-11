@@ -1,16 +1,16 @@
-//1_Ãß»óÅ¬·¡½º2.cpp
+//1_ì¶”ìƒí´ëž˜ìŠ¤2.cpp
 #include <iostream>
 
 // "OCP"
-// ±â´É È®Àå¿¡ Open
-// ÄÚµå ¼öÁ¤¿¡´Â Closed
-// ÇÏµµ·Ï µðÀÚÀÎ ÇÏ¶ó´Â ¿øÄ¢ Principle
+// ê¸°ëŠ¥ í™•ìž¥ì— Open
+// ì½”ë“œ ìˆ˜ì •ì—ëŠ” Closed
+// í•˜ë„ë¡ ë””ìžì¸ í•˜ë¼ëŠ” ì›ì¹™ Principle
 // => "SOLID" : SRP, OCP, LSP, ISP, DIP
 
 // "Tightly Coupled"
-// Å¬·¡½º¿¡¼­ ´Ù¸¥ Å¬·¡½º ÀÌ¿ë ½Ã, Å¬·¡½º ÀÌ¸§À» Á÷Á¢ »ç¿ëÇÏ´Â °Í
-// ±³Ã¼ ºÒ°¡´ÉÇÑ, °æÁ÷µÈ µðÀÚÀÎ.
-// OCP ¸¸Á·ÇÏÁö ¾ÊÀ½
+// í´ëž˜ìŠ¤ì—ì„œ ë‹¤ë¥¸ í´ëž˜ìŠ¤ ì´ìš© ì‹œ, í´ëž˜ìŠ¤ ì´ë¦„ì„ ì§ì ‘ ì‚¬ìš©í•˜ëŠ” ê²ƒ
+// êµì²´ ë¶ˆê°€ëŠ¥í•œ, ê²½ì§ëœ ë””ìžì¸.
+// OCP ë§Œì¡±í•˜ì§€ ì•ŠìŒ
 
 class Camera
 {
