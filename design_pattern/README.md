@@ -7,7 +7,7 @@
 2. upcasting
 3. virtual function
 4. virtual class
-5. example - shape drawer
+5. shape drawer example
 
 6. strategy/template method
 7. policy base design
