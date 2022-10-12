@@ -2,13 +2,13 @@
 #include <string>
 #include <conio.h>
 
-// º¯ÇÏ´Â °ÍÀ» º¯ÇÏÁö ¾Ê´Â °Í°ú ºĞ¸®
-// ¹æ¹ı1. º¯ÇÏ´Â ºÎºĞÀ» ´Ù¸¥ Å¬·¡½º·Î ºĞ¸® (strategy ÆĞÅÏ)
+// ë³€í•˜ëŠ” ê²ƒì„ ë³€í•˜ì§€ ì•ŠëŠ” ê²ƒê³¼ ë¶„ë¦¬
+// ë°©ë²•1. ë³€í•˜ëŠ” ë¶€ë¶„ì„ ë‹¤ë¥¸ í´ë˜ìŠ¤ë¡œ ë¶„ë¦¬ (strategy íŒ¨í„´)
 
-// => EditÀº º¯ÇÏÁö ¾Ê´Â ±â´É
-// => Validation Á¤Ã¥Àº º¯ÇÏ´Â ºÎºĞ
+// => Editì€ ë³€í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥
+// => Validation ì •ì±…ì€ ë³€í•˜ëŠ” ë¶€ë¶„
 
-// ´Ù¾çÇÑ Validation Á¤Ã¥µéÀÇ ±â¹İ Å¬·¡½º (interface)
+// ë‹¤ì–‘í•œ Validation ì •ì±…ë“¤ì˜ ê¸°ë°˜ í´ë˜ìŠ¤ (interface)
 struct IValidator
 {
 	virtual bool validate(const std::string& s, char c) = 0;
@@ -34,7 +34,7 @@ public:
 			if (c == 13 && (pval == nullptr || pval->iscomplete(data))) break;
 
 			if (pval == nullptr || pval->validate(data, c))
-				// validate ÇÔ¼ö¸¦ ´Ù¸¥ Å¬·¡½º¿¡ À§ÀÓ
+				// validate í•¨ìˆ˜ë¥¼ ë‹¤ë¥¸ í´ë˜ìŠ¤ì— ìœ„ì„
 			{
 				std::cout << c;
 				data.push_back(c);
@@ -45,7 +45,7 @@ public:
 	}
 };
 
-// ÀÌÁ¦ ´Ù¾çÇÑ Á¤Ã¥À» °¡Áø "validation Å¬·¡½º"¸¦ ¸¸µé¸é µÊ.
+// ì´ì œ ë‹¤ì–‘í•œ ì •ì±…ì„ ê°€ì§„ "validation í´ë˜ìŠ¤"ë¥¼ ë§Œë“¤ë©´ ë¨.
 class LimitDigitValidator : public IValidator
 {
 	int value;
@@ -77,10 +77,10 @@ int main()
 	}
 }
 
-// ÀåÁ¡
-// => ´Ù¸¥ ÀÔ·Â µµ±¸¿¡¼­µµ Validation Á¤Ã¥Å¬·¡½º »ç¿ë°¡´É
-// => µ¿ÀûÀ¸·Î(½ÇÇà½Ã°£¿¡) Á¤Ã¥ ±³Ã¼°¡ °¡´É
-// => template methodº¸´Ù À¯¿¬ÇÏ´Ù.
+// ì¥ì 
+// => ë‹¤ë¥¸ ì…ë ¥ ë„êµ¬ì—ì„œë„ Validation ì •ì±…í´ë˜ìŠ¤ ì‚¬ìš©ê°€ëŠ¥
+// => ë™ì ìœ¼ë¡œ(ì‹¤í–‰ì‹œê°„ì—) ì •ì±… êµì²´ê°€ ê°€ëŠ¥
+// => template methodë³´ë‹¤ ìœ ì—°í•˜ë‹¤.
 
-// ÀÌ ¿¹Á¦´Â QT ¶ó´Â ¶óÀÌºê·¯¸® ¾È¿¡ ÀÖ´Â
-// QEdit/QValidator ¸¦ ½±°Ô º¯°æÇÑ ÄÚµåÀÔ´Ï´Ù.
+// ì´ ì˜ˆì œëŠ” QT ë¼ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬ ì•ˆì— ìˆëŠ”
+// QEdit/QValidator ë¥¼ ì‰½ê²Œ ë³€ê²½í•œ ì½”ë“œì…ë‹ˆë‹¤.
