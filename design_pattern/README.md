@@ -9,8 +9,8 @@
 4. virtual class
 5. example - shape drawer
 
-6. 공통성과 가변성 분리 - strategy
-7. 공통성과 가변성 분리 - template method
+6. 공통성과 가변성 분리 - strategy/template method
+7. policy base design
 
 (추가중)
 
