@@ -3,15 +3,15 @@
 #include <string>
 
 // strategy, template method
-// => º¯ÇÏ´Â °ÍÀ» º¯°æÇÒ ¼ö ÀÖ°Ô ÇÏ´Â ÆÐÅÏ
+// => ë³€í•˜ëŠ” ê²ƒì„ ë³€ê²½í•  ìˆ˜ ìžˆê²Œ í•˜ëŠ” íŒ¨í„´
 
-// composite ÆÐÅÏ
-// => º¹ÇÕ °´Ã¼¸¦ ¸¸µé ¶§ »ç¿ëÇÏ´Â µðÀÚÀÎ ÆÐÅÏ
-// => Àç±ÍÀû Æ÷ÇÔÀ» »ç¿ëÇÑ º¹ÇÕ°´Ã¼ ¸¸µé±â
-// (A´Â B»Ó¸¸ ¾Æ´Ï¶ó Aµµ Æ÷ÇÔ = Àç±ÍÀû Æ÷ÇÔ)
+// composite íŒ¨í„´
+// => ë³µí•© ê°ì²´ë¥¼ ë§Œë“¤ ë•Œ ì‚¬ìš©í•˜ëŠ” ë””ìžì¸ íŒ¨í„´
+// => ìž¬ê·€ì  í¬í•¨ì„ ì‚¬ìš©í•œ ë³µí•©ê°ì²´ ë§Œë“¤ê¸°
+// (AëŠ” Bë¿ë§Œ ì•„ë‹ˆë¼ Aë„ í¬í•¨ = ìž¬ê·€ì  í¬í•¨)
 
-// Æú´õ´Â Æú´õ or ÆÄÀÏÀ» Æ÷ÇÔ.
-// => °øÅëÀÇ ±â¹Ý Å¬·¡½º ÇÊ¿ä
+// í´ë”ëŠ” í´ë” or íŒŒì¼ì„ í¬í•¨.
+// => ê³µí†µì˜ ê¸°ë°˜ í´ëž˜ìŠ¤ í•„ìš”
 
 class Component
 {
@@ -20,9 +20,9 @@ public:
 	Component(const std::string& title) : title(title) {};
 	virtual ~Component() {};
 
-	// °øÅëÀÇ Æ¯Â¡.
-	// ÇÙ½É.
-	// getSize ÇÔ¼ö
+	// ê³µí†µì˜ íŠ¹ì§•.
+	// í•µì‹¬.
+	// getSize í•¨ìˆ˜
 	virtual int getSize() const = 0;
 };
 
@@ -33,7 +33,7 @@ public:
 	File(const std::string& title, int n) : Component(title), size(n) {};
 	virtual ~File() {};
 
-	// getSize ÇÔ¼ö
+	// getSize í•¨ìˆ˜
 	virtual int getSize() const { return size; }
 };
 
@@ -44,11 +44,11 @@ class Folder : public Component
 public:
 	Folder(const std::string& title) : Component(title) {};
 
-	// addItem ÇÔ¼ö
+	// addItem í•¨ìˆ˜
 	void addItem(Component* f) { v.push_back(f); }
 
-	// ÇÙ½É.
-	// Àç±ÍÀû.
+	// í•µì‹¬.
+	// ìž¬ê·€ì .
 	// getSize
 	virtual int getSize() const override
 	{
@@ -78,8 +78,8 @@ int main()
 	fo1->addItem(f1);
 	root->addItem(f2);
 
-	// ÆÄÀÏÀº ÀÚ½Å¸¸ÀÇ Å©±â´Â ÀÖ½À´Ï´Ù.
-	// Æú´õ´Â ÀÚ½Å¸¸ÀÇ Å©±â´Â ¾øÁö¸¸ Å©±â¸¦ ±¸ÇÒ¼ö ÀÖ½À´Ï´Ù.
+	// íŒŒì¼ì€ ìžì‹ ë§Œì˜ í¬ê¸°ëŠ” ìžˆìŠµë‹ˆë‹¤.
+	// í´ë”ëŠ” ìžì‹ ë§Œì˜ í¬ê¸°ëŠ” ì—†ì§€ë§Œ í¬ê¸°ë¥¼ êµ¬í• ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 	std::cout << f2->getSize() << std::endl; // 20
 	std::cout << fo1->getSize() << std::endl; // 10
 	std::cout << root->getSize() << std::endl; // 30
