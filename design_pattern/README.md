@@ -2,7 +2,7 @@
 @ author : Yeabin Lee \
 @ title : C++ 디자인 패턴 study log
 
-객체 지향 언어의 5대 SOLID 원칙과 C++의 디자인 패턴에 대해 공부합니다.\
+객체 지향 언어의 5대 SOLID 원칙과 C++의 디자인 패턴에 대해 공부합니다.
 
 [목차]
 1. protected constructor
