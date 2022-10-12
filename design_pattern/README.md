@@ -9,8 +9,10 @@
 4. virtual class
 5. example - shape drawer
 
-6. 공통성과 가변성 분리 - strategy/template method
+6. strategy/template method
 7. policy base design
+8. composite patttern
+9. decorator
 
 (추가중)
 
