@@ -1,6 +1,6 @@
 @ date : 2022.10.11 \
 @ author : Yeabin Lee \
-@ title : C++ 디자인 패턴 study log
+@ title : C++ Design Pattern study log
 
 [목차]
 1. protected constructor
