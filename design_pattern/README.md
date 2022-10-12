@@ -7,6 +7,10 @@
 2. upcasting
 3. virtual function
 4. virtual class
-5. example - shape drawer\
+5. example - shape drawer
+
+6. 공통성과 가변성 분리 - strategy
+7. 공통성과 가변성 분리 - template method
+
 (추가중)
 
