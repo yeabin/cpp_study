@@ -13,6 +13,9 @@
 7. policy base design
 8. composite patttern
 9. decorator
+10. adapter
+11. singleton
+
 
 (추가중)
 
