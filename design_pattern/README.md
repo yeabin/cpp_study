@@ -15,7 +15,8 @@
 9. decorator
 10. adapter
 11. singleton
-
+12. command
+13. factory
 
 (추가중)
 
