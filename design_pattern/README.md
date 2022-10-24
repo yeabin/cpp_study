@@ -17,6 +17,7 @@
 11. singleton
 12. command
 13. factory
+14. abstract factory
 
 (추가중)
 
