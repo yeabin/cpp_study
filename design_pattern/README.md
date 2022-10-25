@@ -19,7 +19,7 @@
 13. factory
 14. abstract factory
 15. observer
-
+16. state
 
 (추가중)
 
