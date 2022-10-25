@@ -18,6 +18,8 @@
 12. command
 13. factory
 14. abstract factory
+15. observer
+
 
 (추가중)
 
